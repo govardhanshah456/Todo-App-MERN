@@ -23,7 +23,7 @@ const Register=async (req,res)=>{
             return;
         }
         const result=await User.create({
-            name,email,password
+            name,email,password:hashPass
         });
         const token=Jwt.sign({userId:result._id},jwt_secret_key);
         res.json(jsonGenerate(200,"Registration Successfull",{userId:result._id,token}));

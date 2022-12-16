@@ -1,0 +1,3847 @@
+{
+  "x-generator": "NSwag v13.6.1.0 (NJsonSchema v10.1.21.0 (Newtonsoft.Json v12.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "myeshopAPI",
+    "version": "1.0.0"
+  },
+  "host": "localhost:44376",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v1/api/Address": {
+      "get": {
+        "tags": [
+          "Address"
+        ],
+        "operationId": "Address_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Address"
+        ],
+        "operationId": "Address_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddressModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Address/search": {
+      "get": {
+        "tags": [
+          "Address"
+        ],
+        "operationId": "Address_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Address/{AddressId}": {
+      "get": {
+        "tags": [
+          "Address"
+        ],
+        "operationId": "Address_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "AddressId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Address"
+        ],
+        "operationId": "Address_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "AddressId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AddressModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Address"
+        ],
+        "operationId": "Address_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "AddressId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Cart": {
+      "get": {
+        "tags": [
+          "Cart"
+        ],
+        "operationId": "Cart_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cart"
+        ],
+        "operationId": "Cart_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CartModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Cart/search": {
+      "get": {
+        "tags": [
+          "Cart"
+        ],
+        "operationId": "Cart_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Cart/{CartId}": {
+      "get": {
+        "tags": [
+          "Cart"
+        ],
+        "operationId": "Cart_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CartId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cart"
+        ],
+        "operationId": "Cart_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CartId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CartModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cart"
+        ],
+        "operationId": "Cart_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CartId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Cartdetail": {
+      "get": {
+        "tags": [
+          "Cartdetail"
+        ],
+        "operationId": "Cartdetail_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cartdetail"
+        ],
+        "operationId": "Cartdetail_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CartdetailModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Cartdetail/search": {
+      "get": {
+        "tags": [
+          "Cartdetail"
+        ],
+        "operationId": "Cartdetail_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Cartdetail/{CartId}/{ProductId}": {
+      "get": {
+        "tags": [
+          "Cartdetail"
+        ],
+        "operationId": "Cartdetail_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CartId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cartdetail"
+        ],
+        "operationId": "Cartdetail_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CartId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CartdetailModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cartdetail"
+        ],
+        "operationId": "Cartdetail_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CartId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Customers": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "operationId": "Customers_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Customers"
+        ],
+        "operationId": "Customers_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CustomersModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Customers/search": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "operationId": "Customers_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Customers/{CustomerId}": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "operationId": "Customers_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CustomerId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Customers"
+        ],
+        "operationId": "Customers_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CustomerId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CustomersModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Customers"
+        ],
+        "operationId": "Customers_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "CustomerId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Deliverypartner": {
+      "get": {
+        "tags": [
+          "Deliverypartner"
+        ],
+        "operationId": "Deliverypartner_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Deliverypartner"
+        ],
+        "operationId": "Deliverypartner_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeliverypartnerModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Deliverypartner/search": {
+      "get": {
+        "tags": [
+          "Deliverypartner"
+        ],
+        "operationId": "Deliverypartner_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Deliverypartner/{DeliveryPartnerId}": {
+      "get": {
+        "tags": [
+          "Deliverypartner"
+        ],
+        "operationId": "Deliverypartner_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "DeliveryPartnerId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Deliverypartner"
+        ],
+        "operationId": "Deliverypartner_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "DeliveryPartnerId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeliverypartnerModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Deliverypartner"
+        ],
+        "operationId": "Deliverypartner_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "DeliveryPartnerId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Orderdetails": {
+      "get": {
+        "tags": [
+          "Orderdetails"
+        ],
+        "operationId": "Orderdetails_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Orderdetails"
+        ],
+        "operationId": "Orderdetails_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OrderdetailsModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Orderdetails/search": {
+      "get": {
+        "tags": [
+          "Orderdetails"
+        ],
+        "operationId": "Orderdetails_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Orderdetails/{OrderId}/{ProductId}": {
+      "get": {
+        "tags": [
+          "Orderdetails"
+        ],
+        "operationId": "Orderdetails_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "OrderId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Orderdetails"
+        ],
+        "operationId": "Orderdetails_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "OrderId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OrderdetailsModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Orderdetails"
+        ],
+        "operationId": "Orderdetails_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "OrderId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Orders": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "Orders_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "Orders_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OrdersModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Orders/search": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "Orders_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Orders/{OrderId}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "Orders_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "OrderId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "Orders_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "OrderId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OrdersModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "Orders_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "OrderId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Payments": {
+      "get": {
+        "tags": [
+          "Payments"
+        ],
+        "operationId": "Payments_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Payments"
+        ],
+        "operationId": "Payments_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PaymentsModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Payments/search": {
+      "get": {
+        "tags": [
+          "Payments"
+        ],
+        "operationId": "Payments_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Payments/{PaymentId}": {
+      "get": {
+        "tags": [
+          "Payments"
+        ],
+        "operationId": "Payments_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "PaymentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Payments"
+        ],
+        "operationId": "Payments_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "PaymentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PaymentsModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Payments"
+        ],
+        "operationId": "Payments_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "PaymentId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Productcategory": {
+      "get": {
+        "tags": [
+          "Productcategory"
+        ],
+        "operationId": "Productcategory_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Productcategory"
+        ],
+        "operationId": "Productcategory_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProductcategoryModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Productcategory/search": {
+      "get": {
+        "tags": [
+          "Productcategory"
+        ],
+        "operationId": "Productcategory_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Productcategory/{ProductCategoryID}": {
+      "get": {
+        "tags": [
+          "Productcategory"
+        ],
+        "operationId": "Productcategory_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductCategoryID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Productcategory"
+        ],
+        "operationId": "Productcategory_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductCategoryID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProductcategoryModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Productcategory"
+        ],
+        "operationId": "Productcategory_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductCategoryID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Product": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "Product_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "Product_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProductModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Product/search": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "Product_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Product/{ProductID}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "Product_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "Product_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProductModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "Product_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Productsubcategory": {
+      "get": {
+        "tags": [
+          "Productsubcategory"
+        ],
+        "operationId": "Productsubcategory_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Productsubcategory"
+        ],
+        "operationId": "Productsubcategory_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProductsubcategoryModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Productsubcategory/search": {
+      "get": {
+        "tags": [
+          "Productsubcategory"
+        ],
+        "operationId": "Productsubcategory_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Productsubcategory/{ProductSubCategoryID}": {
+      "get": {
+        "tags": [
+          "Productsubcategory"
+        ],
+        "operationId": "Productsubcategory_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductSubCategoryID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Productsubcategory"
+        ],
+        "operationId": "Productsubcategory_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductSubCategoryID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProductsubcategoryModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Productsubcategory"
+        ],
+        "operationId": "Productsubcategory_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ProductSubCategoryID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Returns": {
+      "get": {
+        "tags": [
+          "Returns"
+        ],
+        "operationId": "Returns_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Returns"
+        ],
+        "operationId": "Returns_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReturnsModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Returns/search": {
+      "get": {
+        "tags": [
+          "Returns"
+        ],
+        "operationId": "Returns_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Returns/{ReturnId}": {
+      "get": {
+        "tags": [
+          "Returns"
+        ],
+        "operationId": "Returns_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ReturnId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Returns"
+        ],
+        "operationId": "Returns_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ReturnId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReturnsModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Returns"
+        ],
+        "operationId": "Returns_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ReturnId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Review": {
+      "get": {
+        "tags": [
+          "Review"
+        ],
+        "operationId": "Review_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Review"
+        ],
+        "operationId": "Review_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReviewModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Review/search": {
+      "get": {
+        "tags": [
+          "Review"
+        ],
+        "operationId": "Review_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Review/{ReviewId}": {
+      "get": {
+        "tags": [
+          "Review"
+        ],
+        "operationId": "Review_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ReviewId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Review"
+        ],
+        "operationId": "Review_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ReviewId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReviewModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Review"
+        ],
+        "operationId": "Review_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ReviewId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Seller": {
+      "get": {
+        "tags": [
+          "Seller"
+        ],
+        "operationId": "Seller_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Seller"
+        ],
+        "operationId": "Seller_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SellerModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Seller/search": {
+      "get": {
+        "tags": [
+          "Seller"
+        ],
+        "operationId": "Seller_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Seller/{SellerID}": {
+      "get": {
+        "tags": [
+          "Seller"
+        ],
+        "operationId": "Seller_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "SellerID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Seller"
+        ],
+        "operationId": "Seller_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "SellerID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SellerModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Seller"
+        ],
+        "operationId": "Seller_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "SellerID",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Shippinginfo": {
+      "get": {
+        "tags": [
+          "Shippinginfo"
+        ],
+        "operationId": "Shippinginfo_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Shippinginfo"
+        ],
+        "operationId": "Shippinginfo_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShippinginfoModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Shippinginfo/search": {
+      "get": {
+        "tags": [
+          "Shippinginfo"
+        ],
+        "operationId": "Shippinginfo_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Shippinginfo/{ShippingId}": {
+      "get": {
+        "tags": [
+          "Shippinginfo"
+        ],
+        "operationId": "Shippinginfo_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ShippingId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Shippinginfo"
+        ],
+        "operationId": "Shippinginfo_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ShippingId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShippinginfoModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Shippinginfo"
+        ],
+        "operationId": "Shippinginfo_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "ShippingId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Token": {
+      "post": {
+        "tags": [
+          "Token"
+        ],
+        "operationId": "Token_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AuthenticateModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Warehouse": {
+      "get": {
+        "tags": [
+          "Warehouse"
+        ],
+        "operationId": "Warehouse_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Warehouse"
+        ],
+        "operationId": "Warehouse_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WarehouseModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Warehouse/search": {
+      "get": {
+        "tags": [
+          "Warehouse"
+        ],
+        "operationId": "Warehouse_Search",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "searchKey",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "page",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "itemsPerPage",
+            "in": "query",
+            "format": "int32",
+            "default": 100,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/v1/api/Warehouse/{WarehouseId}": {
+      "get": {
+        "tags": [
+          "Warehouse"
+        ],
+        "operationId": "Warehouse_GetById",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "WarehouseId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Warehouse"
+        ],
+        "operationId": "Warehouse_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "WarehouseId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WarehouseModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Warehouse"
+        ],
+        "operationId": "Warehouse_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "WarehouseId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddressModel": {
+      "type": "object",
+      "required": [
+        "addressId"
+      ],
+      "properties": {
+        "addressId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "aptNumber": {
+          "type": "string"
+        },
+        "houseNumber": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "stateName": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "contact": {
+          "type": "string"
+        }
+      }
+    },
+    "CartModel": {
+      "type": "object",
+      "required": [
+        "cartId"
+      ],
+      "properties": {
+        "cartId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "dateCreated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "CartdetailModel": {
+      "type": "object",
+      "required": [
+        "cartId",
+        "productId"
+      ],
+      "properties": {
+        "cartId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        }
+      }
+    },
+    "CustomersModel": {
+      "type": "object",
+      "required": [
+        "customerId",
+        "password"
+      ],
+      "properties": {
+        "customerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "email": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "password": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "DeliverypartnerModel": {
+      "type": "object",
+      "required": [
+        "deliveryPartnerId"
+      ],
+      "properties": {
+        "deliveryPartnerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "aptNumber": {
+          "type": "string"
+        },
+        "houseNumber": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "zipcode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "stateName": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "contact": {
+          "type": "string"
+        }
+      }
+    },
+    "OrderdetailsModel": {
+      "type": "object",
+      "required": [
+        "orderId",
+        "productId",
+        "quantity",
+        "unitCost"
+      ],
+      "properties": {
+        "orderId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "productName": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "unitCost": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    },
+    "OrdersModel": {
+      "type": "object",
+      "required": [
+        "orderId",
+        "paymentId",
+        "dateShipped",
+        "shippingId",
+        "status"
+      ],
+      "properties": {
+        "orderId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "paymentId": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "dateCreated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateShipped": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 1
+        },
+        "shippingId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "PaymentsModel": {
+      "type": "object",
+      "required": [
+        "paymentId",
+        "paymentType",
+        "paymentTotal",
+        "paymentDate",
+        "expiryDate",
+        "cvv",
+        "cardNumber"
+      ],
+      "properties": {
+        "paymentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "paymentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "paymentTotal": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "paymentDate": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 1
+        },
+        "expiryDate": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 1
+        },
+        "cvv": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "cardNumber": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        }
+      }
+    },
+    "ProductcategoryModel": {
+      "type": "object",
+      "required": [
+        "productCategoryID",
+        "name"
+      ],
+      "properties": {
+        "productCategoryID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ProductModel": {
+      "type": "object",
+      "required": [
+        "productID",
+        "productName",
+        "price",
+        "manufacturer",
+        "productDimension",
+        "productWeight",
+        "sellerName",
+        "rating",
+        "dateOfManufacture"
+      ],
+      "properties": {
+        "productID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productCategoryID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productSubCategoryID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "manufacturer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "productDimension": {
+          "type": "string",
+          "minLength": 1
+        },
+        "productWeight": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "sellerID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sellerName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rating": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dateOfManufacture": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 1
+        }
+      }
+    },
+    "ProductsubcategoryModel": {
+      "type": "object",
+      "required": [
+        "productSubCategoryID",
+        "name"
+      ],
+      "properties": {
+        "productSubCategoryID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productCategoryID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ReturnsModel": {
+      "type": "object",
+      "required": [
+        "returnId",
+        "customerId",
+        "deliveryPartnerId",
+        "orderId",
+        "productId",
+        "returnDate"
+      ],
+      "properties": {
+        "returnId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "deliveryPartnerId": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "orderId": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2147483647.0,
+          "minimum": -2147483648.0
+        },
+        "returnDate": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "ReviewModel": {
+      "type": "object",
+      "required": [
+        "reviewId"
+      ],
+      "properties": {
+        "reviewId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rating": {
+          "type": "string"
+        },
+        "comments": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "SellerModel": {
+      "type": "object",
+      "required": [
+        "sellerID",
+        "sellerName",
+        "aptNumber",
+        "houseNumber",
+        "street",
+        "city",
+        "stateName",
+        "country",
+        "zipcode",
+        "contact"
+      ],
+      "properties": {
+        "sellerID": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "sellerName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aptNumber": {
+          "type": "string",
+          "minLength": 1
+        },
+        "houseNumber": {
+          "type": "string",
+          "minLength": 1
+        },
+        "street": {
+          "type": "string",
+          "minLength": 1
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stateName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "country": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zipcode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contact": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ShippinginfoModel": {
+      "type": "object",
+      "required": [
+        "shippingId"
+      ],
+      "properties": {
+        "shippingId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deliveryPartnerId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "shippingCost": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "shippingType": {
+          "type": "string"
+        }
+      }
+    },
+    "AuthenticateModel": {
+      "type": "object",
+      "required": [
+        "username",
+        "password"
+      ],
+      "properties": {
+        "username": {
+          "type": "string",
+          "minLength": 1
+        },
+        "password": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "WarehouseModel": {
+      "type": "object",
+      "required": [
+        "warehouseId"
+      ],
+      "properties": {
+        "warehouseId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "street": {
+          "type": "string"
+        },
+        "zipcode": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "city": {
+          "type": "string"
+        },
+        "stateName": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "contact": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

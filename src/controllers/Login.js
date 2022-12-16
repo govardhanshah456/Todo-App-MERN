@@ -1,7 +1,9 @@
 import { check, validationResult } from "express-validator"
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
+import Jwt from "jsonwebtoken";
 import { jwt_secret_key } from "../utils/secret_key.js";
+import { jsonGenerate } from "../utils/jsonGenerate.js";
 export const Login=async (req,res)=>{
     const errors=validationResult(req);
     
@@ -16,13 +18,14 @@ export const Login=async (req,res)=>{
         }
         else{
             console.log(checker.password,password);
-            const check1=bcrypt.compare(password,checker.password);
+            const check1=bcrypt.compareSync(password,checker.password);
             console.log(check1);
             if(!check1){
-                res.json({"message":"Password is incorrect"});
-                return;
+                return res.json({"message":"Password is incorrect"});
+                
             }
-            res.json({"Message":"Login Successful"});
+            const token=Jwt.sign({userId:check1._id},jwt_secret_key);
+            res.json(jsonGenerate(200,"Success",{userId:check1._id,token}));
         }
     }
     catch(e){

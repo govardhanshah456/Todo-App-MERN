@@ -1,9 +1,19 @@
 import express from "express";
+import {check} from "express-validator";
 import { Login } from "../controllers/Login.js";
+import { markTodo } from "../controllers/markTodo.js";
 import Register from "../controllers/Register.js";
+import createTodo from "../controllers/todo.js";
+import { todoDelete } from "../controllers/todoDelete.js";
+import { GetTodos } from "../controllers/TodoList.js";
 import { LoginSchema } from "../validationSchema/LoginSchema.js";
 import { RegisterSchema } from "../validationSchema/RegisterSchema.js";
 const apiRoute=express.Router();
+export const apiProtected=express.Router();
 apiRoute.post("/register",RegisterSchema,Register);
-apiRoute.post("/login",LoginSchema,Login)
+apiRoute.post("/login",LoginSchema,Login);
+apiProtected.post("/createTodo",[check("desc","Todo Desc is required").exists()],createTodo);
+apiProtected.get("/getTodo",GetTodos);
+apiProtected.post("/markTodo",markTodo);
+apiProtected.post("/todoDelete",todoDelete);
 export default apiRoute;

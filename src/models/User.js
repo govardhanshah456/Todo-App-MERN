@@ -16,6 +16,10 @@ const UserSchema=mongoose.Schema({
         max:30,
         min:8
     },
+    todos:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Todo"
+    }],
     date:{
         type:Date,
         default:Date.now
